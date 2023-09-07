@@ -1,0 +1,18 @@
+I have two variables: 'recqs8Inthepast3years_before' and 'recqs8Inthe_past6monthsdurin',  in STATA, which I changed to a numeric one, and I want to create an average between these two variables, which is defined as follows:             
+replace recqs8Inthepast3years_before = 1 if recqs8Inthepast3years_before == "More than 10% growth"
+replace recqs8Inthepast3years_before = 2 if recqs8Inthepast3years_before == "Between 5% and 10% growth"
+replace recqs8Inthepast3years_before = 3 if recqs8Inthepast3years_before == "Between 0% and 5% growth"
+replace recqs8Inthepast3years_before = 4 if recqs8Inthepast3years_before == "No change"
+replace recqs8Inthepast3years_before = 5 if recqs8Inthepast3years_before == "Between 0% and 5% decline"
+replace recqs8Inthepast3years_before = 6 if recqs8Inthepast3years_before == "Between 5% and 10% decline"
+replace recqs8Inthepast3years_before = 7 if recqs8Inthepast3years_before == "More than 10% decline"
+
+The same process for the variable, `recqs8Inthe_past6monthsdurin`.
+replace recqs8Inthe_past6monthsdurin = 1 if recqs8Inthe_past6monthsdurin == "More than 10% growth"
+replace recqs8Inthe_past6monthsdurin = 2 if recqs8Inthe_past6monthsdurin == "Between 5% and 10% growth"
+replace recqs8Inthe_past6monthsdurin = 3 if recqs8Inthe_past6monthsdurin == "Between 0% and 5% growth"
+replace recqs8Inthe_past6monthsdurin = 4 if recqs8Inthe_past6monthsdurin == "No change"
+replace recqs8Inthe_past6monthsdurin = 5 if recqs8Inthe_past6monthsdurin == "Between 0% and 5% decline"
+replace recqs8Inthe_past6monthsdurin = 6 if recqs8Inthe_past6monthsdurin == "Between 5% and 10% decline"
+replace recqs8Inthe_past6monthsdurin = 7 if recqs8Inthe_past6monthsdurin == "More than 10% decline", 
+Now that my qualitative variables change to numerical variables, HOW COULD I CALCULATE THE AVERAGE BETWEEN THESE 2 VARIABLES THAT I WANT TO USE AS A DEPENDENT VARIABLE IN MY REGRESSION,
